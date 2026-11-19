@@ -1,0 +1,1656 @@
+version 3
+run Stability-10-20261114-13:03:44-9996
+attr configname Stability
+attr datetime 20261114-13:03:44
+attr datetimef 20261114-130344
+attr experiment Stability
+attr inifile omnetpp.ini
+attr iterationvars $G=1.5
+attr iterationvarsd G=1.5
+attr iterationvarsf G=1.5-
+attr measurement $G=1.5
+attr network CsmaCdNet
+attr processid 9996
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 10
+attr seedset 0
+itervar G 1.5
+config output-scalar-file results/verified/Stability-10.sca
+config output-vector-file results/verified/Stability-10.vec
+config **.protocol "\"csmacd\""
+config sim-time-limit 100s
+config warmup-period 10s
+config **.G 1.5
+config network CsmaCdNet
+config sim-time-limit 20s
+config warmup-period 2s
+config repeat 5
+config cmdenv-express-mode true
+config seed-set 0
+config num-rngs 2
+config output-scalar-file results/verified/Stability-10.sca
+config output-vector-file results/verified/Stability-10.vec
+config **.vector-recording false
+config **.numNodes 10
+config **.bitrate 10Mbps
+config **.frameBits 10000
+config **.maxPropDelay 5us
+config **.maxBackoffExp 10
+config **.maxAttempts 16
+
+par CsmaCdNet.bus typename "\"Bus\""
+par CsmaCdNet.bus maxPropDelay 4.9999999999999996e-06s
+attr unit s
+par CsmaCdNet.node[0] typename "\"Node\""
+par CsmaCdNet.node[0] protocol "\"csmacd\""
+par CsmaCdNet.node[0] G 1.5
+par CsmaCdNet.node[0] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[0] frameBits 10000
+par CsmaCdNet.node[0] jamBits 32
+par CsmaCdNet.node[0] slotBits 512
+par CsmaCdNet.node[0] maxAttempts 16
+par CsmaCdNet.node[0] maxBackoffExp 10
+par CsmaCdNet.node[0] retxWindow 10
+par CsmaCdNet.node[0] queueLimit 10
+par CsmaCdNet.node[0] deterministic false
+par CsmaCdNet.node[0] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[0] generated 13530
+scalar CsmaCdNet.node[0] blocked 6016
+scalar CsmaCdNet.node[0] success 7360
+scalar CsmaCdNet.node[0] collisions 15149
+scalar CsmaCdNet.node[0] dropped 149
+scalar CsmaCdNet.node[0] retransmissions 15000
+scalar CsmaCdNet.node[0] txAttempts 22509
+scalar CsmaCdNet.node[0] resolvedAttempts 22509
+scalar CsmaCdNet.node[0] initialPending 4
+scalar CsmaCdNet.node[0] finalPending 9
+scalar CsmaCdNet.node[0] delaySum 537.2339042510184
+scalar CsmaCdNet.node[0] measurementTime 90
+scalar CsmaCdNet.node[0] frameTime 0.001
+scalar CsmaCdNet.node[0] phyModelVersion 2
+scalar CsmaCdNet.node[0] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[0] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[0] frameBits 10000
+scalar CsmaCdNet.node[0] backoffs 15000
+scalar CsmaCdNet.node[0] maxBackoffDraw 1023
+scalar CsmaCdNet.node[0] maxBackoffExponent 10
+scalar CsmaCdNet.node[0] carrierWaits 17632
+scalar CsmaCdNet.node[0] throughput 0.08177777777777778
+scalar CsmaCdNet.node[0] attempts:mean 2.7331521739130435
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[0] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[0] attempts:histogram
+field count 7360
+field mean 2.7331521739130435
+field stddev 2.7763955373082005
+field min 1
+field max 16
+field sum 20116
+field sqrsum 111706
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	3036
+bin	2	2157
+bin	3	739
+bin	4	348
+bin	5	208
+bin	6	166
+bin	7	131
+bin	8	136
+bin	9	82
+bin	10	79
+bin	11	63
+bin	12	65
+bin	13	58
+bin	14	43
+bin	15	25
+bin	16	24
+bin	17	0
+bin	18	0
+bin	19	0
+bin	20	0
+scalar CsmaCdNet.node[0] delay:mean 0.07299373699062718
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[0] delay:max 0.5850755347409999
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[0] delay:histogram
+field count 7360
+field mean 0.07299373699062718
+field stddev 0.08900496850483815
+field min 0.001005
+field max 0.5850755347409999
+field sum 537.233904251016
+field sqrsum 97.51185774543552
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	2798
+bin	0.01	765
+bin	0.02	297
+bin	0.03	197
+bin	0.04	175
+bin	0.05	155
+bin	0.06	178
+bin	0.07	202
+bin	0.08	147
+bin	0.09	154
+bin	0.1	142
+bin	0.11	157
+bin	0.12	157
+bin	0.13	149
+bin	0.14	142
+bin	0.15	144
+bin	0.16	135
+bin	0.17	149
+bin	0.18	170
+bin	0.19	132
+bin	0.2	161
+bin	0.21	77
+bin	0.22	95
+bin	0.23	103
+bin	0.24	46
+bin	0.25	46
+bin	0.26	44
+bin	0.27	41
+bin	0.28	26
+bin	0.29000000000000004	35
+bin	0.30000000000000004	19
+bin	0.31	7
+bin	0.32	13
+bin	0.33	10
+bin	0.34	11
+bin	0.35000000000000003	15
+bin	0.36	21
+bin	0.37	14
+bin	0.38	3
+bin	0.39	1
+bin	0.4	4
+bin	0.41000000000000003	2
+bin	0.42000000000000004	1
+bin	0.43000000000000005	3
+bin	0.44000000000000006	5
+bin	0.45	1
+bin	0.46	1
+bin	0.47000000000000003	2
+bin	0.48000000000000004	2
+bin	0.49000000000000005	1
+bin	0.5	0
+bin	0.51	0
+bin	0.52	0
+bin	0.53	0
+bin	0.54	0
+bin	0.55	0
+bin	0.56	0
+bin	0.5700000000000001	1
+bin	0.5800000000000001	4
+bin	0.59	0
+par CsmaCdNet.node[1] typename "\"Node\""
+par CsmaCdNet.node[1] protocol "\"csmacd\""
+par CsmaCdNet.node[1] G 1.5
+par CsmaCdNet.node[1] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[1] frameBits 10000
+par CsmaCdNet.node[1] jamBits 32
+par CsmaCdNet.node[1] slotBits 512
+par CsmaCdNet.node[1] maxAttempts 16
+par CsmaCdNet.node[1] maxBackoffExp 10
+par CsmaCdNet.node[1] retxWindow 10
+par CsmaCdNet.node[1] queueLimit 10
+par CsmaCdNet.node[1] deterministic false
+par CsmaCdNet.node[1] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[1] generated 13652
+scalar CsmaCdNet.node[1] blocked 5706
+scalar CsmaCdNet.node[1] success 7800
+scalar CsmaCdNet.node[1] collisions 15656
+scalar CsmaCdNet.node[1] dropped 136
+scalar CsmaCdNet.node[1] retransmissions 15519
+scalar CsmaCdNet.node[1] txAttempts 23456
+scalar CsmaCdNet.node[1] resolvedAttempts 23456
+scalar CsmaCdNet.node[1] initialPending 0
+scalar CsmaCdNet.node[1] finalPending 10
+scalar CsmaCdNet.node[1] delaySum 514.4815528395803
+scalar CsmaCdNet.node[1] measurementTime 90
+scalar CsmaCdNet.node[1] frameTime 0.001
+scalar CsmaCdNet.node[1] phyModelVersion 2
+scalar CsmaCdNet.node[1] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[1] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[1] frameBits 10000
+scalar CsmaCdNet.node[1] backoffs 15520
+scalar CsmaCdNet.node[1] maxBackoffDraw 1023
+scalar CsmaCdNet.node[1] maxBackoffExponent 10
+scalar CsmaCdNet.node[1] carrierWaits 18889
+scalar CsmaCdNet.node[1] throughput 0.08666666666666667
+scalar CsmaCdNet.node[1] attempts:mean 2.727051282051282
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[1] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[1] attempts:histogram
+field count 7800
+field mean 2.727051282051282
+field stddev 2.8142451771939765
+field min 1
+field max 16
+field sum 21271
+field sqrsum 119775
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	3516
+bin	2	1946
+bin	3	761
+bin	4	388
+bin	5	222
+bin	6	188
+bin	7	137
+bin	8	152
+bin	9	112
+bin	10	96
+bin	11	78
+bin	12	61
+bin	13	43
+bin	14	30
+bin	15	42
+bin	16	28
+bin	17	0
+bin	18	0
+bin	19	0
+scalar CsmaCdNet.node[1] delay:mean 0.06595917344097166
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[1] delay:max 0.52050867888
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[1] delay:histogram
+field count 7800
+field mean 0.06595917344097166
+field stddev 0.0848612324803162
+field min 0.001005
+field max 0.52050867888
+field sum 514.481552839579
+field sqrsum 90.09872101615868
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	3064
+bin	0.01	879
+bin	0.02	417
+bin	0.03	249
+bin	0.04	217
+bin	0.05	172
+bin	0.06	158
+bin	0.07	141
+bin	0.08	123
+bin	0.09	133
+bin	0.1	161
+bin	0.11	143
+bin	0.12	196
+bin	0.13	188
+bin	0.14	174
+bin	0.15	174
+bin	0.16	142
+bin	0.17	161
+bin	0.18	149
+bin	0.19	107
+bin	0.2	90
+bin	0.21	94
+bin	0.22	72
+bin	0.23	39
+bin	0.24	46
+bin	0.25	46
+bin	0.26	20
+bin	0.27	18
+bin	0.28	27
+bin	0.29	44
+bin	0.3	26
+bin	0.31	24
+bin	0.32	23
+bin	0.33	8
+bin	0.34	6
+bin	0.35000000000000003	6
+bin	0.36	5
+bin	0.37	6
+bin	0.38	13
+bin	0.39	6
+bin	0.4	5
+bin	0.41000000000000003	8
+bin	0.42000000000000004	1
+bin	0.43000000000000005	4
+bin	0.44000000000000006	5
+bin	0.45000000000000007	3
+bin	0.4600000000000001	0
+bin	0.4700000000000001	2
+bin	0.48000000000000004	1
+bin	0.49000000000000005	0
+bin	0.5	0
+bin	0.51	2
+bin	0.52	2
+bin	0.53	0
+par CsmaCdNet.node[2] typename "\"Node\""
+par CsmaCdNet.node[2] protocol "\"csmacd\""
+par CsmaCdNet.node[2] G 1.5
+par CsmaCdNet.node[2] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[2] frameBits 10000
+par CsmaCdNet.node[2] jamBits 32
+par CsmaCdNet.node[2] slotBits 512
+par CsmaCdNet.node[2] maxAttempts 16
+par CsmaCdNet.node[2] maxBackoffExp 10
+par CsmaCdNet.node[2] retxWindow 10
+par CsmaCdNet.node[2] queueLimit 10
+par CsmaCdNet.node[2] deterministic false
+par CsmaCdNet.node[2] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[2] generated 13354
+scalar CsmaCdNet.node[2] blocked 4897
+scalar CsmaCdNet.node[2] success 8362
+scalar CsmaCdNet.node[2] collisions 15925
+scalar CsmaCdNet.node[2] dropped 104
+scalar CsmaCdNet.node[2] retransmissions 15821
+scalar CsmaCdNet.node[2] txAttempts 24287
+scalar CsmaCdNet.node[2] resolvedAttempts 24287
+scalar CsmaCdNet.node[2] initialPending 10
+scalar CsmaCdNet.node[2] finalPending 1
+scalar CsmaCdNet.node[2] delaySum 478.4229394770457
+scalar CsmaCdNet.node[2] measurementTime 90
+scalar CsmaCdNet.node[2] frameTime 0.001
+scalar CsmaCdNet.node[2] phyModelVersion 2
+scalar CsmaCdNet.node[2] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[2] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[2] frameBits 10000
+scalar CsmaCdNet.node[2] backoffs 15821
+scalar CsmaCdNet.node[2] maxBackoffDraw 1023
+scalar CsmaCdNet.node[2] maxBackoffExponent 10
+scalar CsmaCdNet.node[2] carrierWaits 19757
+scalar CsmaCdNet.node[2] throughput 0.09291111111111111
+scalar CsmaCdNet.node[2] attempts:mean 2.7065295383879455
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[2] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[2] attempts:histogram
+field count 8362
+field mean 2.7065295383879455
+field stddev 2.8108624427731788
+field min 1
+field max 16
+field sum 22632
+field sqrsum 127314
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	3895
+bin	2	2006
+bin	3	757
+bin	4	416
+bin	5	244
+bin	6	202
+bin	7	176
+bin	8	148
+bin	9	115
+bin	10	97
+bin	11	80
+bin	12	68
+bin	13	56
+bin	14	42
+bin	15	35
+bin	16	25
+bin	17	0
+bin	18	0
+bin	19	0
+scalar CsmaCdNet.node[2] delay:mean 0.05721393679467149
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[2] delay:max 0.431403748388
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[2] delay:histogram
+field count 8362
+field mean 0.05721393679467149
+field stddev 0.07551065378610178
+field min 0.001005
+field max 0.431403748388
+field sum 478.422939477043
+field sqrsum 75.04570154150554
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	2615
+bin	0.005	980
+bin	0.01	547
+bin	0.015	315
+bin	0.02	199
+bin	0.025	181
+bin	0.03	150
+bin	0.035	167
+bin	0.04	111
+bin	0.045	105
+bin	0.05	113
+bin	0.055	127
+bin	0.06	95
+bin	0.065	108
+bin	0.07	83
+bin	0.075	87
+bin	0.08	101
+bin	0.085	98
+bin	0.09	74
+bin	0.095	64
+bin	0.1	89
+bin	0.105	91
+bin	0.11	88
+bin	0.115	78
+bin	0.12	99
+bin	0.125	91
+bin	0.13	72
+bin	0.135	84
+bin	0.14	61
+bin	0.145	82
+bin	0.15	86
+bin	0.155	84
+bin	0.16	95
+bin	0.165	80
+bin	0.17	66
+bin	0.17500000000000002	58
+bin	0.18	53
+bin	0.185	67
+bin	0.19	69
+bin	0.195	40
+bin	0.2	51
+bin	0.20500000000000002	39
+bin	0.21	33
+bin	0.215	29
+bin	0.22	44
+bin	0.225	32
+bin	0.23	22
+bin	0.23500000000000001	25
+bin	0.24	21
+bin	0.245	17
+bin	0.25	8
+bin	0.255	9
+bin	0.26	8
+bin	0.265	5
+bin	0.27	7
+bin	0.275	6
+bin	0.28	11
+bin	0.28500000000000003	18
+bin	0.29000000000000004	7
+bin	0.29500000000000004	9
+bin	0.30000000000000004	6
+bin	0.30500000000000005	11
+bin	0.31000000000000005	10
+bin	0.31500000000000006	5
+bin	0.32000000000000006	12
+bin	0.32500000000000007	7
+bin	0.33000000000000007	4
+bin	0.3350000000000001	6
+bin	0.3400000000000001	7
+bin	0.3450000000000001	6
+bin	0.3500000000000001	7
+bin	0.3550000000000001	4
+bin	0.3600000000000001	4
+bin	0.3650000000000001	4
+bin	0.37000000000000005	1
+bin	0.37500000000000006	4
+bin	0.38000000000000006	1
+bin	0.38500000000000006	2
+bin	0.39000000000000007	0
+bin	0.3950000000000001	3
+bin	0.4000000000000001	0
+bin	0.4050000000000001	0
+bin	0.4100000000000001	2
+bin	0.4150000000000001	0
+bin	0.4200000000000001	0
+bin	0.4250000000000001	1
+bin	0.4300000000000001	1
+bin	0.4350000000000001	0
+par CsmaCdNet.node[3] typename "\"Node\""
+par CsmaCdNet.node[3] protocol "\"csmacd\""
+par CsmaCdNet.node[3] G 1.5
+par CsmaCdNet.node[3] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[3] frameBits 10000
+par CsmaCdNet.node[3] jamBits 32
+par CsmaCdNet.node[3] slotBits 512
+par CsmaCdNet.node[3] maxAttempts 16
+par CsmaCdNet.node[3] maxBackoffExp 10
+par CsmaCdNet.node[3] retxWindow 10
+par CsmaCdNet.node[3] queueLimit 10
+par CsmaCdNet.node[3] deterministic false
+par CsmaCdNet.node[3] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[3] generated 13522
+scalar CsmaCdNet.node[3] blocked 4690
+scalar CsmaCdNet.node[3] success 8738
+scalar CsmaCdNet.node[3] collisions 15995
+scalar CsmaCdNet.node[3] dropped 91
+scalar CsmaCdNet.node[3] retransmissions 15904
+scalar CsmaCdNet.node[3] txAttempts 24733
+scalar CsmaCdNet.node[3] resolvedAttempts 24733
+scalar CsmaCdNet.node[3] initialPending 7
+scalar CsmaCdNet.node[3] finalPending 10
+scalar CsmaCdNet.node[3] delaySum 457.77158481493007
+scalar CsmaCdNet.node[3] measurementTime 90
+scalar CsmaCdNet.node[3] frameTime 0.001
+scalar CsmaCdNet.node[3] phyModelVersion 2
+scalar CsmaCdNet.node[3] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[3] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[3] frameBits 10000
+scalar CsmaCdNet.node[3] backoffs 15904
+scalar CsmaCdNet.node[3] maxBackoffDraw 1023
+scalar CsmaCdNet.node[3] maxBackoffExponent 10
+scalar CsmaCdNet.node[3] carrierWaits 20494
+scalar CsmaCdNet.node[3] throughput 0.09708888888888888
+scalar CsmaCdNet.node[3] attempts:mean 2.6623941405355915
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[3] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[3] attempts:histogram
+field count 8738
+field mean 2.6623941405355915
+field stddev 2.768676116667357
+field min 1
+field max 16
+field sum 23264
+field sqrsum 128912
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	4324
+bin	2	1818
+bin	3	834
+bin	4	414
+bin	5	241
+bin	6	203
+bin	7	222
+bin	8	157
+bin	9	142
+bin	10	98
+bin	11	78
+bin	12	64
+bin	13	54
+bin	14	34
+bin	15	29
+bin	16	26
+bin	17	0
+bin	18	0
+bin	19	0
+bin	20	0
+scalar CsmaCdNet.node[3] delay:mean 0.05238859977282307
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[3] delay:max 0.448725859468
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[3] delay:histogram
+field count 8738
+field mean 0.05238859977282307
+field stddev 0.07559286663667461
+field min 0.001005
+field max 0.448725859468
+field sum 457.771584814928
+field sqrsum 73.9076896904808
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	3359
+bin	0.006	1059
+bin	0.012	537
+bin	0.018000000000000002	355
+bin	0.024	208
+bin	0.03	184
+bin	0.036000000000000004	152
+bin	0.042	139
+bin	0.048	114
+bin	0.054	91
+bin	0.06	114
+bin	0.066	92
+bin	0.07200000000000001	120
+bin	0.078	79
+bin	0.084	67
+bin	0.09	81
+bin	0.096	86
+bin	0.10200000000000001	92
+bin	0.108	83
+bin	0.114	107
+bin	0.12	107
+bin	0.126	91
+bin	0.132	87
+bin	0.138	84
+bin	0.14400000000000002	80
+bin	0.15	105
+bin	0.156	82
+bin	0.162	84
+bin	0.168	101
+bin	0.17400000000000002	78
+bin	0.18	64
+bin	0.186	56
+bin	0.192	52
+bin	0.198	59
+bin	0.20400000000000001	39
+bin	0.21000000000000002	43
+bin	0.21600000000000003	27
+bin	0.222	27
+bin	0.228	31
+bin	0.234	32
+bin	0.24000000000000002	24
+bin	0.246	34
+bin	0.252	32
+bin	0.258	23
+bin	0.264	17
+bin	0.27	17
+bin	0.276	19
+bin	0.28200000000000003	13
+bin	0.28800000000000003	7
+bin	0.294	5
+bin	0.3	6
+bin	0.306	6
+bin	0.312	6
+bin	0.318	4
+bin	0.324	5
+bin	0.32999999999999996	8
+bin	0.33599999999999997	9
+bin	0.34199999999999997	3
+bin	0.348	10
+bin	0.354	9
+bin	0.36	2
+bin	0.366	5
+bin	0.372	4
+bin	0.378	4
+bin	0.384	0
+bin	0.39	2
+bin	0.396	1
+bin	0.402	0
+bin	0.408	1
+bin	0.414	3
+bin	0.42	0
+bin	0.426	1
+bin	0.432	4
+bin	0.438	4
+bin	0.444	2
+bin	0.44999999999999996	0
+par CsmaCdNet.node[4] typename "\"Node\""
+par CsmaCdNet.node[4] protocol "\"csmacd\""
+par CsmaCdNet.node[4] G 1.5
+par CsmaCdNet.node[4] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[4] frameBits 10000
+par CsmaCdNet.node[4] jamBits 32
+par CsmaCdNet.node[4] slotBits 512
+par CsmaCdNet.node[4] maxAttempts 16
+par CsmaCdNet.node[4] maxBackoffExp 10
+par CsmaCdNet.node[4] retxWindow 10
+par CsmaCdNet.node[4] queueLimit 10
+par CsmaCdNet.node[4] deterministic false
+par CsmaCdNet.node[4] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[4] generated 13525
+scalar CsmaCdNet.node[4] blocked 3995
+scalar CsmaCdNet.node[4] success 9462
+scalar CsmaCdNet.node[4] collisions 16948
+scalar CsmaCdNet.node[4] dropped 66
+scalar CsmaCdNet.node[4] retransmissions 16881
+scalar CsmaCdNet.node[4] txAttempts 26410
+scalar CsmaCdNet.node[4] resolvedAttempts 26410
+scalar CsmaCdNet.node[4] initialPending 0
+scalar CsmaCdNet.node[4] finalPending 2
+scalar CsmaCdNet.node[4] delaySum 416.1626565691016
+scalar CsmaCdNet.node[4] measurementTime 90
+scalar CsmaCdNet.node[4] frameTime 0.001
+scalar CsmaCdNet.node[4] phyModelVersion 2
+scalar CsmaCdNet.node[4] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[4] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[4] frameBits 10000
+scalar CsmaCdNet.node[4] backoffs 16882
+scalar CsmaCdNet.node[4] maxBackoffDraw 1023
+scalar CsmaCdNet.node[4] maxBackoffExponent 10
+scalar CsmaCdNet.node[4] carrierWaits 21869
+scalar CsmaCdNet.node[4] throughput 0.10513333333333333
+scalar CsmaCdNet.node[4] attempts:mean 2.678820545339252
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[4] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[4] attempts:histogram
+field count 9462
+field mean 2.678820545339252
+field stddev 2.7726626821026876
+field min 1
+field max 16
+field sum 25347
+field sqrsum 140633
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	4773
+bin	2	1814
+bin	3	856
+bin	4	506
+bin	5	282
+bin	6	260
+bin	7	191
+bin	8	217
+bin	9	148
+bin	10	119
+bin	11	81
+bin	12	67
+bin	13	55
+bin	14	43
+bin	15	23
+bin	16	27
+bin	17	0
+scalar CsmaCdNet.node[4] delay:mean 0.043982525530448104
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[4] delay:max 0.492092079165
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[4] delay:histogram
+field count 9462
+field mean 0.043982525530448104
+field stddev 0.06763203235656436
+field min 0.001005
+field max 0.492092079165
+field sum 416.16265656909997
+field sqrsum 61.579367193597044
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	4715
+bin	0.01	1144
+bin	0.02	514
+bin	0.03	296
+bin	0.04	242
+bin	0.05	210
+bin	0.06	180
+bin	0.07	163
+bin	0.08	178
+bin	0.09	183
+bin	0.1	171
+bin	0.11	178
+bin	0.12	136
+bin	0.13	142
+bin	0.14	102
+bin	0.15	105
+bin	0.16	117
+bin	0.17	97
+bin	0.18	109
+bin	0.19	76
+bin	0.2	51
+bin	0.21	45
+bin	0.22	51
+bin	0.23	45
+bin	0.24	49
+bin	0.25	33
+bin	0.26	15
+bin	0.27	13
+bin	0.28	11
+bin	0.29	10
+bin	0.3	17
+bin	0.31	11
+bin	0.32	5
+bin	0.33	7
+bin	0.34	9
+bin	0.35	3
+bin	0.36	6
+bin	0.37	2
+bin	0.38	2
+bin	0.39	2
+bin	0.39999999999999997	2
+bin	0.41	5
+bin	0.42	4
+bin	0.43	2
+bin	0.44	3
+bin	0.44999999999999996	0
+bin	0.45999999999999996	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	1
+bin	0.5	0
+par CsmaCdNet.node[5] typename "\"Node\""
+par CsmaCdNet.node[5] protocol "\"csmacd\""
+par CsmaCdNet.node[5] G 1.5
+par CsmaCdNet.node[5] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[5] frameBits 10000
+par CsmaCdNet.node[5] jamBits 32
+par CsmaCdNet.node[5] slotBits 512
+par CsmaCdNet.node[5] maxAttempts 16
+par CsmaCdNet.node[5] maxBackoffExp 10
+par CsmaCdNet.node[5] retxWindow 10
+par CsmaCdNet.node[5] queueLimit 10
+par CsmaCdNet.node[5] deterministic false
+par CsmaCdNet.node[5] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[5] generated 13511
+scalar CsmaCdNet.node[5] blocked 4251
+scalar CsmaCdNet.node[5] success 9176
+scalar CsmaCdNet.node[5] collisions 16256
+scalar CsmaCdNet.node[5] dropped 82
+scalar CsmaCdNet.node[5] retransmissions 16174
+scalar CsmaCdNet.node[5] txAttempts 25432
+scalar CsmaCdNet.node[5] resolvedAttempts 25432
+scalar CsmaCdNet.node[5] initialPending 8
+scalar CsmaCdNet.node[5] finalPending 10
+scalar CsmaCdNet.node[5] delaySum 431.1908608883292
+scalar CsmaCdNet.node[5] measurementTime 90
+scalar CsmaCdNet.node[5] frameTime 0.001
+scalar CsmaCdNet.node[5] phyModelVersion 2
+scalar CsmaCdNet.node[5] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[5] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[5] frameBits 10000
+scalar CsmaCdNet.node[5] backoffs 16174
+scalar CsmaCdNet.node[5] maxBackoffDraw 1023
+scalar CsmaCdNet.node[5] maxBackoffExponent 10
+scalar CsmaCdNet.node[5] carrierWaits 21117
+scalar CsmaCdNet.node[5] throughput 0.10195555555555556
+scalar CsmaCdNet.node[5] attempts:mean 2.628269398430689
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[5] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[5] attempts:histogram
+field count 9176
+field mean 2.628269398430689
+field stddev 2.7358359918266424
+field min 1
+field max 16
+field sum 24117
+field sqrsum 132059
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	4719
+bin	2	1728
+bin	3	840
+bin	4	496
+bin	5	251
+bin	6	220
+bin	7	216
+bin	8	169
+bin	9	150
+bin	10	105
+bin	11	89
+bin	12	55
+bin	13	47
+bin	14	38
+bin	15	31
+bin	16	22
+bin	17	0
+scalar CsmaCdNet.node[5] delay:mean 0.046991157463854294
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[5] delay:max 0.642291748273
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[5] delay:histogram
+field count 9176
+field mean 0.046991157463854294
+field stddev 0.07082732554566604
+field min 0.001005
+field max 0.642291748273
+field sum 431.190860888327
+field sqrsum 66.28863729423564
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	4488
+bin	0.01	1058
+bin	0.02	475
+bin	0.03	281
+bin	0.04	265
+bin	0.05	214
+bin	0.06	212
+bin	0.07	165
+bin	0.08	134
+bin	0.09	135
+bin	0.1	134
+bin	0.11	117
+bin	0.12	123
+bin	0.13	140
+bin	0.14	177
+bin	0.15	169
+bin	0.16	159
+bin	0.17	135
+bin	0.18	95
+bin	0.19	92
+bin	0.2	80
+bin	0.21	68
+bin	0.22	49
+bin	0.23	37
+bin	0.24	25
+bin	0.25	19
+bin	0.26	17
+bin	0.27	11
+bin	0.28	14
+bin	0.29	8
+bin	0.3	11
+bin	0.31	15
+bin	0.32	11
+bin	0.33	6
+bin	0.34	1
+bin	0.35	0
+bin	0.36	2
+bin	0.37	8
+bin	0.38	6
+bin	0.39	1
+bin	0.4	0
+bin	0.41000000000000003	1
+bin	0.42000000000000004	2
+bin	0.43000000000000005	2
+bin	0.44	0
+bin	0.45	2
+bin	0.46	2
+bin	0.47000000000000003	0
+bin	0.48000000000000004	1
+bin	0.49000000000000005	2
+bin	0.5	0
+bin	0.51	0
+bin	0.52	0
+bin	0.53	0
+bin	0.54	1
+bin	0.55	1
+bin	0.56	0
+bin	0.5700000000000001	0
+bin	0.5800000000000001	0
+bin	0.5900000000000001	0
+bin	0.6000000000000001	0
+bin	0.6100000000000001	0
+bin	0.6200000000000001	0
+bin	0.6300000000000001	2
+bin	0.64	3
+bin	0.65	0
+par CsmaCdNet.node[6] typename "\"Node\""
+par CsmaCdNet.node[6] protocol "\"csmacd\""
+par CsmaCdNet.node[6] G 1.5
+par CsmaCdNet.node[6] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[6] frameBits 10000
+par CsmaCdNet.node[6] jamBits 32
+par CsmaCdNet.node[6] slotBits 512
+par CsmaCdNet.node[6] maxAttempts 16
+par CsmaCdNet.node[6] maxBackoffExp 10
+par CsmaCdNet.node[6] retxWindow 10
+par CsmaCdNet.node[6] queueLimit 10
+par CsmaCdNet.node[6] deterministic false
+par CsmaCdNet.node[6] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[6] generated 13577
+scalar CsmaCdNet.node[6] blocked 4636
+scalar CsmaCdNet.node[6] success 8841
+scalar CsmaCdNet.node[6] collisions 16320
+scalar CsmaCdNet.node[6] dropped 95
+scalar CsmaCdNet.node[6] retransmissions 16226
+scalar CsmaCdNet.node[6] txAttempts 25161
+scalar CsmaCdNet.node[6] resolvedAttempts 25161
+scalar CsmaCdNet.node[6] initialPending 4
+scalar CsmaCdNet.node[6] finalPending 9
+scalar CsmaCdNet.node[6] delaySum 450.24950985851837
+scalar CsmaCdNet.node[6] measurementTime 90
+scalar CsmaCdNet.node[6] frameTime 0.001
+scalar CsmaCdNet.node[6] phyModelVersion 2
+scalar CsmaCdNet.node[6] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[6] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[6] frameBits 10000
+scalar CsmaCdNet.node[6] backoffs 16225
+scalar CsmaCdNet.node[6] maxBackoffDraw 1022
+scalar CsmaCdNet.node[6] maxBackoffExponent 10
+scalar CsmaCdNet.node[6] carrierWaits 20706
+scalar CsmaCdNet.node[6] throughput 0.09823333333333333
+scalar CsmaCdNet.node[6] attempts:mean 2.6750367605474494
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[6] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[6] attempts:histogram
+field count 8841
+field mean 2.6750367605474494
+field stddev 2.765973366942447
+field min 1
+field max 16
+field sum 23650
+field sqrsum 130896
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	4359
+bin	2	1833
+bin	3	805
+bin	4	447
+bin	5	289
+bin	6	225
+bin	7	165
+bin	8	173
+bin	9	144
+bin	10	121
+bin	11	79
+bin	12	67
+bin	13	45
+bin	14	33
+bin	15	34
+bin	16	22
+bin	17	0
+bin	18	0
+scalar CsmaCdNet.node[6] delay:mean 0.050927441449894355
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[6] delay:max 0.417833138167
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[6] delay:histogram
+field count 8841
+field mean 0.050927441449894355
+field stddev 0.07213807075779619
+field min 0.001005
+field max 0.417833138167
+field sum 450.249509858516
+field sqrsum 68.9325426246494
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	4096
+bin	0.01	982
+bin	0.02	474
+bin	0.03	271
+bin	0.04	244
+bin	0.05	165
+bin	0.06	217
+bin	0.07	209
+bin	0.08	186
+bin	0.09	162
+bin	0.1	180
+bin	0.11	146
+bin	0.12	114
+bin	0.13	128
+bin	0.14	166
+bin	0.15	152
+bin	0.16	142
+bin	0.17	113
+bin	0.18	127
+bin	0.19	89
+bin	0.2	80
+bin	0.21	66
+bin	0.22	70
+bin	0.23	56
+bin	0.24	37
+bin	0.25	25
+bin	0.26	24
+bin	0.27	12
+bin	0.28	12
+bin	0.29	11
+bin	0.3	11
+bin	0.31	11
+bin	0.32	7
+bin	0.33	10
+bin	0.34	9
+bin	0.35000000000000003	10
+bin	0.36	3
+bin	0.37	1
+bin	0.38	5
+bin	0.39	6
+bin	0.4	6
+bin	0.41000000000000003	6
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47000000000000003	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+bin	0.52	0
+bin	0.53	0
+par CsmaCdNet.node[7] typename "\"Node\""
+par CsmaCdNet.node[7] protocol "\"csmacd\""
+par CsmaCdNet.node[7] G 1.5
+par CsmaCdNet.node[7] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[7] frameBits 10000
+par CsmaCdNet.node[7] jamBits 32
+par CsmaCdNet.node[7] slotBits 512
+par CsmaCdNet.node[7] maxAttempts 16
+par CsmaCdNet.node[7] maxBackoffExp 10
+par CsmaCdNet.node[7] retxWindow 10
+par CsmaCdNet.node[7] queueLimit 10
+par CsmaCdNet.node[7] deterministic false
+par CsmaCdNet.node[7] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[7] generated 13734
+scalar CsmaCdNet.node[7] blocked 5158
+scalar CsmaCdNet.node[7] success 8500
+scalar CsmaCdNet.node[7] collisions 15945
+scalar CsmaCdNet.node[7] dropped 86
+scalar CsmaCdNet.node[7] retransmissions 15860
+scalar CsmaCdNet.node[7] txAttempts 24445
+scalar CsmaCdNet.node[7] resolvedAttempts 24445
+scalar CsmaCdNet.node[7] initialPending 10
+scalar CsmaCdNet.node[7] finalPending 0
+scalar CsmaCdNet.node[7] delaySum 490.29036935139453
+scalar CsmaCdNet.node[7] measurementTime 90
+scalar CsmaCdNet.node[7] frameTime 0.001
+scalar CsmaCdNet.node[7] phyModelVersion 2
+scalar CsmaCdNet.node[7] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[7] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[7] frameBits 10000
+scalar CsmaCdNet.node[7] backoffs 15859
+scalar CsmaCdNet.node[7] maxBackoffDraw 1023
+scalar CsmaCdNet.node[7] maxBackoffExponent 10
+scalar CsmaCdNet.node[7] carrierWaits 19744
+scalar CsmaCdNet.node[7] throughput 0.09444444444444444
+scalar CsmaCdNet.node[7] attempts:mean 2.715294117647059
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[7] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[7] attempts:histogram
+field count 8500
+field mean 2.715294117647059
+field stddev 2.844005049416941
+field min 1
+field max 16
+field sum 23080
+field sqrsum 131412
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	3984
+bin	2	1971
+bin	3	841
+bin	4	401
+bin	5	245
+bin	6	211
+bin	7	170
+bin	8	126
+bin	9	112
+bin	10	119
+bin	11	87
+bin	12	66
+bin	13	53
+bin	14	41
+bin	15	40
+bin	16	33
+bin	17	0
+scalar CsmaCdNet.node[7] delay:mean 0.057681219923693294
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[7] delay:max 0.582679181339
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[7] delay:histogram
+field count 8500
+field mean 0.057681219923693294
+field stddev 0.07804284380305775
+field min 0.001005
+field max 0.582679181339
+field sum 490.290369351393
+field sqrsum 80.04528242093963
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	3680
+bin	0.01	878
+bin	0.02	382
+bin	0.03	299
+bin	0.04	216
+bin	0.05	204
+bin	0.06	232
+bin	0.07	198
+bin	0.08	179
+bin	0.09	197
+bin	0.1	139
+bin	0.11	161
+bin	0.12	187
+bin	0.13	164
+bin	0.14	158
+bin	0.15	144
+bin	0.16	155
+bin	0.17	149
+bin	0.18	159
+bin	0.19	123
+bin	0.2	69
+bin	0.21	77
+bin	0.22	68
+bin	0.23	42
+bin	0.24	49
+bin	0.25	41
+bin	0.26	11
+bin	0.27	6
+bin	0.28	14
+bin	0.29000000000000004	7
+bin	0.30000000000000004	5
+bin	0.31	12
+bin	0.32	12
+bin	0.33	14
+bin	0.34	13
+bin	0.35000000000000003	9
+bin	0.36	3
+bin	0.37	7
+bin	0.38	2
+bin	0.39	2
+bin	0.4	6
+bin	0.41000000000000003	4
+bin	0.42000000000000004	2
+bin	0.43000000000000005	0
+bin	0.44000000000000006	0
+bin	0.45000000000000007	1
+bin	0.4600000000000001	1
+bin	0.47000000000000003	0
+bin	0.48000000000000004	1
+bin	0.49000000000000005	2
+bin	0.5	4
+bin	0.51	5
+bin	0.52	0
+bin	0.53	1
+bin	0.54	1
+bin	0.55	1
+bin	0.56	1
+bin	0.5700000000000001	2
+bin	0.5800000000000001	1
+bin	0.5900000000000001	0
+par CsmaCdNet.node[8] typename "\"Node\""
+par CsmaCdNet.node[8] protocol "\"csmacd\""
+par CsmaCdNet.node[8] G 1.5
+par CsmaCdNet.node[8] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[8] frameBits 10000
+par CsmaCdNet.node[8] jamBits 32
+par CsmaCdNet.node[8] slotBits 512
+par CsmaCdNet.node[8] maxAttempts 16
+par CsmaCdNet.node[8] maxBackoffExp 10
+par CsmaCdNet.node[8] retxWindow 10
+par CsmaCdNet.node[8] queueLimit 10
+par CsmaCdNet.node[8] deterministic false
+par CsmaCdNet.node[8] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[8] generated 13498
+scalar CsmaCdNet.node[8] blocked 5700
+scalar CsmaCdNet.node[8] success 7676
+scalar CsmaCdNet.node[8] collisions 15264
+scalar CsmaCdNet.node[8] dropped 123
+scalar CsmaCdNet.node[8] retransmissions 15141
+scalar CsmaCdNet.node[8] txAttempts 22940
+scalar CsmaCdNet.node[8] resolvedAttempts 22940
+scalar CsmaCdNet.node[8] initialPending 5
+scalar CsmaCdNet.node[8] finalPending 4
+scalar CsmaCdNet.node[8] delaySum 524.4320933447456
+scalar CsmaCdNet.node[8] measurementTime 90
+scalar CsmaCdNet.node[8] frameTime 0.001
+scalar CsmaCdNet.node[8] phyModelVersion 2
+scalar CsmaCdNet.node[8] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[8] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[8] frameBits 10000
+scalar CsmaCdNet.node[8] backoffs 15141
+scalar CsmaCdNet.node[8] maxBackoffDraw 1023
+scalar CsmaCdNet.node[8] maxBackoffExponent 10
+scalar CsmaCdNet.node[8] carrierWaits 18254
+scalar CsmaCdNet.node[8] throughput 0.08528888888888889
+scalar CsmaCdNet.node[8] attempts:mean 2.732021886399166
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[8] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[8] attempts:histogram
+field count 7676
+field mean 2.732021886399166
+field stddev 2.866537686624211
+field min 1
+field max 16
+field sum 20971
+field sqrsum 120359
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	3479
+bin	2	1930
+bin	3	741
+bin	4	381
+bin	5	206
+bin	6	162
+bin	7	157
+bin	8	110
+bin	9	105
+bin	10	94
+bin	11	84
+bin	12	62
+bin	13	53
+bin	14	42
+bin	15	46
+bin	16	24
+bin	17	0
+bin	18	0
+bin	19	0
+bin	20	0
+scalar CsmaCdNet.node[8] delay:mean 0.06832101268170193
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[8] delay:max 0.592924484719
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[8] delay:histogram
+field count 7676
+field mean 0.06832101268170193
+field stddev 0.08560247850274547
+field min 0.001005
+field max 0.592924484719
+field sum 524.432093344744
+field sqrsum 92.07047640071252
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	2982
+bin	0.01	740
+bin	0.02	359
+bin	0.03	263
+bin	0.04	185
+bin	0.05	192
+bin	0.06	165
+bin	0.07	184
+bin	0.08	193
+bin	0.09	135
+bin	0.1	159
+bin	0.11	166
+bin	0.12	182
+bin	0.13	167
+bin	0.14	209
+bin	0.15	213
+bin	0.16	171
+bin	0.17	158
+bin	0.18	120
+bin	0.19	103
+bin	0.2	99
+bin	0.21	73
+bin	0.22	68
+bin	0.23	47
+bin	0.24	59
+bin	0.25	45
+bin	0.26	27
+bin	0.27	26
+bin	0.28	11
+bin	0.29000000000000004	12
+bin	0.30000000000000004	14
+bin	0.31	16
+bin	0.32	20
+bin	0.33	8
+bin	0.34	3
+bin	0.35000000000000003	14
+bin	0.36	11
+bin	0.37	15
+bin	0.38	11
+bin	0.39	12
+bin	0.4	5
+bin	0.41000000000000003	7
+bin	0.42000000000000004	4
+bin	0.43000000000000005	2
+bin	0.44000000000000006	4
+bin	0.45000000000000007	0
+bin	0.4600000000000001	4
+bin	0.4700000000000001	6
+bin	0.48000000000000004	1
+bin	0.49000000000000005	0
+bin	0.5	1
+bin	0.51	0
+bin	0.52	0
+bin	0.53	0
+bin	0.54	3
+bin	0.55	0
+bin	0.56	1
+bin	0.5700000000000001	0
+bin	0.5800000000000001	0
+bin	0.5900000000000001	1
+bin	0.6000000000000001	0
+par CsmaCdNet.node[9] typename "\"Node\""
+par CsmaCdNet.node[9] protocol "\"csmacd\""
+par CsmaCdNet.node[9] G 1.5
+par CsmaCdNet.node[9] bitrate 1e+07bps
+attr unit bps
+par CsmaCdNet.node[9] frameBits 10000
+par CsmaCdNet.node[9] jamBits 32
+par CsmaCdNet.node[9] slotBits 512
+par CsmaCdNet.node[9] maxAttempts 16
+par CsmaCdNet.node[9] maxBackoffExp 10
+par CsmaCdNet.node[9] retxWindow 10
+par CsmaCdNet.node[9] queueLimit 10
+par CsmaCdNet.node[9] deterministic false
+par CsmaCdNet.node[9] firstArrival 0.001s
+attr unit s
+scalar CsmaCdNet.node[9] generated 13736
+scalar CsmaCdNet.node[9] blocked 6389
+scalar CsmaCdNet.node[9] success 7217
+scalar CsmaCdNet.node[9] collisions 14929
+scalar CsmaCdNet.node[9] dropped 134
+scalar CsmaCdNet.node[9] retransmissions 14795
+scalar CsmaCdNet.node[9] txAttempts 22146
+scalar CsmaCdNet.node[9] resolvedAttempts 22146
+scalar CsmaCdNet.node[9] initialPending 7
+scalar CsmaCdNet.node[9] finalPending 3
+scalar CsmaCdNet.node[9] delaySum 541.3205119516308
+scalar CsmaCdNet.node[9] measurementTime 90
+scalar CsmaCdNet.node[9] frameTime 0.001
+scalar CsmaCdNet.node[9] phyModelVersion 2
+scalar CsmaCdNet.node[9] propagationTime 4.9999999999999996e-06
+scalar CsmaCdNet.node[9] alohaSlotTime 0.001005
+scalar CsmaCdNet.node[9] frameBits 10000
+scalar CsmaCdNet.node[9] backoffs 14795
+scalar CsmaCdNet.node[9] maxBackoffDraw 1022
+scalar CsmaCdNet.node[9] maxBackoffExponent 10
+scalar CsmaCdNet.node[9] carrierWaits 17284
+scalar CsmaCdNet.node[9] throughput 0.08018888888888889
+scalar CsmaCdNet.node[9] attempts:mean 2.7715117084661216
+attr recordingmode mean
+attr source attempts
+attr title "transmissions per frame, mean"
+scalar CsmaCdNet.node[9] attempts:max 16
+attr recordingmode max
+attr source attempts
+attr title "transmissions per frame, max"
+statistic CsmaCdNet.node[9] attempts:histogram
+field count 7217
+field mean 2.7715117084661216
+field stddev 2.86436316331975
+field min 1
+field max 16
+field sum 20002
+field sqrsum 114640
+attr recordingmode histogram
+attr source attempts
+attr title "transmissions per frame"
+bin	-inf	0
+bin	0	0
+bin	1	2976
+bin	2	2074
+bin	3	733
+bin	4	370
+bin	5	211
+bin	6	143
+bin	7	139
+bin	8	118
+bin	9	98
+bin	10	75
+bin	11	46
+bin	12	53
+bin	13	56
+bin	14	44
+bin	15	45
+bin	16	36
+bin	17	0
+bin	18	0
+bin	19	0
+bin	20	0
+scalar CsmaCdNet.node[9] delay:mean 0.07500630621471956
+attr recordingmode mean
+attr source delay
+attr title "frame delay, mean"
+scalar CsmaCdNet.node[9] delay:max 0.63391706005
+attr recordingmode max
+attr source delay
+attr title "frame delay, max"
+statistic CsmaCdNet.node[9] delay:histogram
+field count 7217
+field mean 0.07500630621471956
+field stddev 0.0958871464929067
+field min 0.001005
+field max 0.63391706005
+field sum 541.320511951631
+field sqrsum 106.94884460792909
+attr recordingmode histogram
+attr source delay
+attr title "frame delay"
+bin	-inf	0
+bin	0	2859
+bin	0.01	680
+bin	0.02	280
+bin	0.03	194
+bin	0.04	181
+bin	0.05	139
+bin	0.06	130
+bin	0.07	108
+bin	0.08	142
+bin	0.09	162
+bin	0.1	181
+bin	0.11	171
+bin	0.12	146
+bin	0.13	172
+bin	0.14	148
+bin	0.15	181
+bin	0.16	166
+bin	0.17	156
+bin	0.18	142
+bin	0.19	114
+bin	0.2	116
+bin	0.21	82
+bin	0.22	76
+bin	0.23	58
+bin	0.24	39
+bin	0.25	55
+bin	0.26	34
+bin	0.27	24
+bin	0.28	29
+bin	0.29	39
+bin	0.3	17
+bin	0.31	14
+bin	0.32	18
+bin	0.33	24
+bin	0.34	16
+bin	0.35000000000000003	12
+bin	0.36	2
+bin	0.37	10
+bin	0.38	11
+bin	0.39	5
+bin	0.4	9
+bin	0.41000000000000003	8
+bin	0.42	10
+bin	0.43	13
+bin	0.44	3
+bin	0.45	7
+bin	0.46	4
+bin	0.47000000000000003	0
+bin	0.48	5
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+bin	0.52	0
+bin	0.53	2
+bin	0.54	3
+bin	0.55	2
+bin	0.56	2
+bin	0.5700000000000001	0
+bin	0.58	7
+bin	0.59	2
+bin	0.6	4
+bin	0.61	1
+bin	0.62	1
+bin	0.63	1
+bin	0.64	0
+bin	0.65	0
+bin	0.66	0
+bin	0.67	0
+bin	0.68	0
+bin	0.6900000000000001	0
+bin	0.7000000000000001	0
+par CsmaCdNet typename "\"CsmaCdNet\""
+par CsmaCdNet numNodes 10
+

@@ -1,0 +1,71 @@
+file 2052 1795102357                                            
+version 3
+run TestSlotted-0-20261119-22:32:37-22084
+attr configname TestSlotted
+attr datetime 20261119-22:32:37
+attr datetimef 20261119-223237
+attr experiment TestSlotted
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network CsmaCdNet
+attr processid 22084
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config output-scalar-file results/tests/TestSlotted-0.sca
+config output-vector-file results/tests/TestSlotted-0.vec
+config extends TestCollision
+config **.protocol "\"slotted\""
+config *.node[0].firstArrival 1.1ms
+config *.node[1].firstArrival 2.1ms
+config extends TestSingle
+config **.numNodes 2
+config repeat 1
+config warmup-period 0s
+config sim-time-limit 10ms
+config **.numNodes 1
+config **.deterministic true
+config **.vector-recording true
+config network CsmaCdNet
+config sim-time-limit 20s
+config warmup-period 2s
+config repeat 5
+config cmdenv-express-mode true
+config seed-set 0
+config num-rngs 2
+config output-scalar-file results/verified/TestSlotted-0.sca
+config output-vector-file results/verified/TestSlotted-0.vec
+config **.vector-recording false
+config **.numNodes 10
+config **.bitrate 10Mbps
+config **.frameBits 10000
+config **.maxPropDelay 5us
+config **.maxBackoffExp 10
+config **.maxAttempts 16
+
+vector 0 CsmaCdNet.node[0] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 1 CsmaCdNet.node[0] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+vector 2 CsmaCdNet.node[0] backoffExponent:vector ETV
+attr recordingmode vector
+attr source backoffExponent
+vector 3 CsmaCdNet.node[1] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 4 CsmaCdNet.node[1] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+vector 5 CsmaCdNet.node[1] backoffExponent:vector ETV
+attr recordingmode vector
+attr source backoffExponent
+0	2005 21 4 4 0.00201 0.00201 1 0.00201 0.00201 0.00201 4.0401000000000005e-06
+3	2026 24 11 11 0.003015 0.003015 1 0.003015 0.003015 0.003015 9.090225e-06
+

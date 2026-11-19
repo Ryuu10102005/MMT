@@ -1,0 +1,73 @@
+file 2209 1795102358                                            
+version 3
+run TestSlottedLongPropagation-0-20261119-22:32:38-14328
+attr configname TestSlottedLongPropagation
+attr datetime 20261119-22:32:38
+attr datetimef 20261119-223238
+attr experiment TestSlottedLongPropagation
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network CsmaCdNet
+attr processid 14328
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config output-scalar-file results/tests/TestSlottedLongPropagation-0.sca
+config output-vector-file results/tests/TestSlottedLongPropagation-0.vec
+config extends TestSlotted
+config **.maxPropDelay 400us
+config extends TestCollision
+config **.protocol "\"slotted\""
+config *.node[0].firstArrival 1.1ms
+config *.node[1].firstArrival 2.1ms
+config extends TestSingle
+config **.numNodes 2
+config repeat 1
+config warmup-period 0s
+config sim-time-limit 10ms
+config **.numNodes 1
+config **.deterministic true
+config **.vector-recording true
+config network CsmaCdNet
+config sim-time-limit 20s
+config warmup-period 2s
+config repeat 5
+config cmdenv-express-mode true
+config seed-set 0
+config num-rngs 2
+config output-scalar-file results/verified/TestSlottedLongPropagation-0.sca
+config output-vector-file results/verified/TestSlottedLongPropagation-0.vec
+config **.vector-recording false
+config **.numNodes 10
+config **.bitrate 10Mbps
+config **.frameBits 10000
+config **.maxPropDelay 5us
+config **.maxBackoffExp 10
+config **.maxAttempts 16
+
+vector 0 CsmaCdNet.node[0] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 1 CsmaCdNet.node[0] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+vector 2 CsmaCdNet.node[0] backoffExponent:vector ETV
+attr recordingmode vector
+attr source backoffExponent
+vector 3 CsmaCdNet.node[1] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 4 CsmaCdNet.node[1] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+vector 5 CsmaCdNet.node[1] backoffExponent:vector ETV
+attr recordingmode vector
+attr source backoffExponent
+0	2168 19 4 4 0.0014 0.0014 1 0.0014 0.0014 0.0014 1.96e-06
+3	2187 20 11 11 0.0028 0.0028 1 0.0028 0.0028 0.0028 7.84e-06
+

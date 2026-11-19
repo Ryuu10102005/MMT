@@ -1,0 +1,61 @@
+file 1713 1794632468                                            
+version 3
+run TestInvalid-0-20261114-12:01:08-20984
+attr configname TestInvalid
+attr datetime 20261114-12:01:08
+attr datetimef 20261114-120108
+attr experiment TestInvalid
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network CsmaCdNet
+attr processid 20984
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config output-scalar-file results/verified/TestInvalid-0.sca
+config output-vector-file results/verified/TestInvalid-0.vec
+config extends TestCollision
+config **.maxPropDelay 600us
+config extends TestSingle
+config **.numNodes 2
+config repeat 1
+config warmup-period 0s
+config sim-time-limit 10ms
+config **.numNodes 1
+config **.deterministic true
+config **.vector-recording true
+config network CsmaCdNet
+config sim-time-limit 20s
+config warmup-period 2s
+config repeat 5
+config cmdenv-express-mode true
+config seed-set 0
+config num-rngs 2
+config output-scalar-file results/verified/TestInvalid-0.sca
+config output-vector-file results/verified/TestInvalid-0.vec
+config **.vector-recording false
+config **.numNodes 10
+config **.bitrate 10Mbps
+config **.frameBits 10000
+config **.maxPropDelay 5us
+config **.maxBackoffExp 10
+config **.maxAttempts 16
+
+vector 0 CsmaCdNet.node[0] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 1 CsmaCdNet.node[0] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+vector 2 CsmaCdNet.node[1] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 3 CsmaCdNet.node[1] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+

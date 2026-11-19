@@ -1,0 +1,54 @@
+version 3
+run TestSingle-0-20261119-22:32:36-29424
+attr configname TestSingle
+attr datetime 20261119-22:32:36
+attr datetimef 20261119-223236
+attr experiment TestSingle
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network CsmaCdNet
+attr processid 29424
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config output-scalar-file results/tests/TestSingle-0.sca
+config output-vector-file results/tests/TestSingle-0.vec
+config repeat 1
+config warmup-period 0s
+config sim-time-limit 10ms
+config **.numNodes 1
+config **.deterministic true
+config **.vector-recording true
+config network CsmaCdNet
+config sim-time-limit 20s
+config warmup-period 2s
+config repeat 5
+config cmdenv-express-mode true
+config seed-set 0
+config num-rngs 2
+config output-scalar-file results/verified/TestSingle-0.sca
+config output-vector-file results/verified/TestSingle-0.vec
+config **.vector-recording false
+config **.numNodes 10
+config **.bitrate 10Mbps
+config **.frameBits 10000
+config **.maxPropDelay 5us
+config **.maxBackoffExp 10
+config **.maxAttempts 16
+
+vector 0 CsmaCdNet.node[0] txStart:vector ETV
+attr recordingmode vector
+attr source txStart
+vector 1 CsmaCdNet.node[0] backoffSlots:vector ETV
+attr recordingmode vector
+attr source backoffSlots
+vector 2 CsmaCdNet.node[0] backoffExponent:vector ETV
+attr recordingmode vector
+attr source backoffExponent
+0	2	0.001	0.001
+
